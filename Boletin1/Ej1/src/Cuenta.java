@@ -23,7 +23,6 @@ public class Cuenta {
     public void ingresarDinero (double dineroAIngresar)throws CuentaException{
 
         Scanner sc = new Scanner(System.in);
-        System.out.println("Cuanto dinero quieres ingresar");
         dineroAIngresar = sc.nextDouble();
         if (dineroAIngresar < 0){
             throw new CuentaException("El valor debe ser positivo");
@@ -35,9 +34,7 @@ public class Cuenta {
     }
     public void sacarDinero (double dineroASacar) throws CuentaException, CuentaCreditoException {
 
-
         Scanner sc = new Scanner(System.in);
-        System.out.println("Cuanto dinero deseas sacar");
         dineroASacar = sc.nextDouble();
 
         if (dineroASacar <= 0){

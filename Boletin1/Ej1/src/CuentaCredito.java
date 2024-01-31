@@ -3,6 +3,7 @@ public class CuentaCredito extends Cuenta {
 
     public static final double CREDITO_DEFAULT = 100;
     public static final double CREDITO_MAXIMO = 300;
+    private double creditoLimite = CREDITO_MAXIMO;
     private double credito;
 
     public CuentaCredito(double saldo, double credito) throws CuentaCreditoException {
@@ -39,6 +40,22 @@ public class CuentaCredito extends Cuenta {
     @Override
     public void ingresarDinero(double dineroAIngresar) throws CuentaException {
 
+        if (credito < creditoLimite) {
+            double diferenciaCredito = credito - creditoLimite;
+            if (diferenciaCredito <= dineroAIngresar) {
+
+                dineroAIngresar -= diferenciaCredito;
+                credito = creditoLimite;
+
+            } else {
+                credito += dineroAIngresar;
+
+            }
+            if (dineroAIngresar > 0) {
+                super.ingresarDinero(dineroAIngresar);
+            }
+        }
+
 
     }
 
@@ -55,7 +72,6 @@ public class CuentaCredito extends Cuenta {
 
             dineroASacar -= getSaldo();
             super.sacarDinero(getSaldo());
-
             this.credito -= dineroASacar;
 
         }
