@@ -13,5 +13,10 @@ public class Coche {
        public Combustible getCombustible() {
            return combustible;
        }
+
+       @Override
+       public double getPrecioDiario() {
+           return getGama().getPrecioDia() + combustible.getPrecioCombustibleDia();
+       }
    }
 }

@@ -1,4 +1,4 @@
-public class Vehiculo {
+public abstract class Vehiculo {
 
     private String matricula;
     private Gama gama;
@@ -17,4 +17,13 @@ public class Vehiculo {
     public Gama getGama() {
         return gama;
     }
+
+    public abstract double getPrecioDiario ();
+
+    public double getPrecioAlquiler (int dias){
+
+        return getPrecioDiario() * dias;
+    }
+
+
 }
