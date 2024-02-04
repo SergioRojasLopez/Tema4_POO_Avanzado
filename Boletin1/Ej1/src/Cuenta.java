@@ -2,54 +2,37 @@ import java.util.Scanner;
 
 public class Cuenta {
 
-    public static final double SALDO_DEFAULT = 0;
-    private double saldo;
+    private  double creditoCuenta;
+    private  double saldoCuenta;
 
-
-
-    public Cuenta(double saldo) {
-        this.saldo = saldo;
+    public Cuenta(double creditoCuenta, double saldoCuenta) {
+        this.creditoCuenta = creditoCuenta;
+        this.saldoCuenta = saldoCuenta;
     }
 
-    public Cuenta() {
-        this.saldo = SALDO_DEFAULT;
-
+    public double getCreditoCuenta() {
+        return creditoCuenta;
     }
 
-    public double getSaldo() {
-        return saldo;
+    public void setCreditoCuenta(double creditoCuenta) {
+        this.creditoCuenta = creditoCuenta;
     }
 
-    public void ingresarDinero (double dineroAIngresar)throws CuentaException{
 
+    public double sacarDinero (){
+        double dineroSacar;
         Scanner sc = new Scanner(System.in);
-        dineroAIngresar = sc.nextDouble();
-        if (dineroAIngresar < 0){
-            throw new CuentaException("El valor debe ser positivo");
-        }else {
 
-            this.saldo += dineroAIngresar;
-        }
+        Cuenta cuenta = new Cuenta(100,0);
 
-    }
-    public void sacarDinero (double dineroASacar) throws CuentaException, CuentaCreditoException {
+        System.out.println("Cuanto dinero quieres sacar "+ ", recuerda que tienes " + cuenta.getCreditoCuenta());
+        dineroSacar = sc.nextDouble();
 
-        Scanner sc = new Scanner(System.in);
-        dineroASacar = sc.nextDouble();
-
-        if (dineroASacar <= 0){
-            throw new CuentaException("Debes ingresar un valor positivo");
+        if (dineroSacar < cuenta.getCreditoCuenta()){
 
 
         }
-        if (dineroASacar > saldo){
 
-            throw new CuentaException("No puedes sacar mas del saldo disponible(" + saldo + "$)");
-
-        }
-
-        this.saldo -= dineroASacar;
-
-
+        return dineroSacar;
     }
 }
