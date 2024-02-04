@@ -16,10 +16,15 @@ public class Microbus extends Vehiculo {
 
         if (numPlazas < 1){
 
-            throw new VehiculoException("Numero de plazas incorrecto")
+            throw new VehiculoException("Numero de plazas incorrecto");
         }
 
         this.numPlazas = numPlazas;
 
+    }
+
+    @Override
+    public double getPrecioDiario() {
+        return 0;
     }
 }

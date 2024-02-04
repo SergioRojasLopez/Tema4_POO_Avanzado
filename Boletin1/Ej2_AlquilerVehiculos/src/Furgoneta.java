@@ -7,14 +7,15 @@ public class Furgoneta extends Vehiculo{
     public Furgoneta(String matricula, Gama gama, int pma) throws VehiculoException {
         super(matricula, gama);
         this.pma = pma;
-        setPma();
+        //POSIBLE ERROR
+        setPma(pma);
 
     }
 
     public void setPma(int pma) throws VehiculoException {
 
         if (pma < 1){
-            throw new VehiculoException("PMA invalido")
+            throw new VehiculoException("PMA invalido");
 
         }
         this.pma = pma;

@@ -20,7 +20,7 @@ public class MenuVehiculo {
             switch (opcion){
 
                 case 1:
-                    darAlta
+                    darAltaVehiculo();
                     break;
 
             }
