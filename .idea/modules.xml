@@ -3,10 +3,11 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/Boletin1/Boletin1.iml" filepath="$PROJECT_DIR$/Boletin1/Boletin1.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Boletin2/Boletin2.iml" filepath="$PROJECT_DIR$/Boletin2/Boletin2.iml" />
       <module fileurl="file://$PROJECT_DIR$/Boletin1/Ej1/Ej1.iml" filepath="$PROJECT_DIR$/Boletin1/Ej1/Ej1.iml" />
       <module fileurl="file://$PROJECT_DIR$/Boletin1/Ej2_AlquilerVehiculos/Ej2.iml" filepath="$PROJECT_DIR$/Boletin1/Ej2_AlquilerVehiculos/Ej2.iml" />
       <module fileurl="file://$PROJECT_DIR$/Boletin1/Ej3_JuegoRol/Ej3_JuegoRol.iml" filepath="$PROJECT_DIR$/Boletin1/Ej3_JuegoRol/Ej3_JuegoRol.iml" />
-      <module fileurl="file://$PROJECT_DIR$/Boletin1/Ej5_InstalacionDeportiva/Ej5_InstalacionDeportiva.iml" filepath="$PROJECT_DIR$/Boletin1/Ej5_InstalacionDeportiva/Ej5_InstalacionDeportiva.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Boletin1/Ej6/Ej6.iml" filepath="$PROJECT_DIR$/Boletin1/Ej6/Ej6.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/Tema4_POO_Avanzado.iml" filepath="$PROJECT_DIR$/.idea/Tema4_POO_Avanzado.iml" />
     </modules>
   </component>
