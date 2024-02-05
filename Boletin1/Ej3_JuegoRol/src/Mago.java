@@ -1,3 +1,5 @@
+import java.util.Arrays;
+
 public class Mago extends Personaje {
 
     private static final int FUERZA_MAXIMA = 15;
@@ -31,9 +33,69 @@ public class Mago extends Personaje {
     }
 
     public void aprenderHechizo (String hechizo) throws PersonajeException {
+        boolean encontrado = false;
+        int posicionVacia = -1;
+
+        for (int i = 0; i < hechizos.length && !encontrado; i++) {
+            if (hechizo.equals(hechizos[i])) {
+                encontrado = true;
+            }
+
+            if (hechizos[i] == null && posicionVacia == -1) {
+                posicionVacia = i;
+            }
+        }
+
+        if (encontrado) {
+            throw new PersonajeException("El mago no puede aprender dos veces el mismo hechizo.");
+        }
+
+        if (posicionVacia == -1) {
+            throw new PersonajeException("El mago no tiene mas slots para aprender un hechizo nuevo.");
+        }
+
+        hechizos[posicionVacia] = hechizo;
 
 
+    }
+    public void lanzarHechizo (String hechizo, Personaje personaje) throws PersonajeException{
 
 
+        int posHechizo = -1;
+
+        for(int i = 0; i < hechizo.length() && posHechizo == -1; i++){
+
+            if (hechizo.equals(hechizos[i])) {
+                posHechizo = i;
+            }
+
+            if (posHechizo == -1) {
+                throw new PersonajeException("El mago no conoce el hechizo");
+            }
+
+            if (this == personaje) {
+                throw new PersonajeException("No puedes lanzar un hechizo a tu mismo personaje");
+            }
+
+            if (personaje.getVidaActual() == 0) {
+                throw new PersonajeException("El personaje al que quieres atacar esta muerto");
+            }
+
+
+            personaje.setVidaActual(personaje.getVidaActual()-DAÑO_HECHIZO);
+            hechizos[posHechizo] = null;
+
+        }
+
+
+    }
+
+    @Override
+    public String toString() {
+        final StringBuilder sb = new StringBuilder("Mago{");
+        sb.append("hechizos=").append(Arrays.toString(hechizos));
+        sb.append(super.toString());
+        sb.append('}');
+        return sb.toString();
     }
 }

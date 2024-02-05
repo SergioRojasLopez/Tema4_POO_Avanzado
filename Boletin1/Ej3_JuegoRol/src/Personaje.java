@@ -17,7 +17,7 @@ public class Personaje {
     private int vidaMaxima;
     private int vidaActual;
 
-    public Personaje (TipoRaza raza, String nombre, int fuerza, int inteligencia, int vidaMaxima) throws PersonajeException{
+    public Personaje(TipoRaza raza, String nombre, int fuerza, int inteligencia, int vidaMaxima) throws PersonajeException {
         this.raza = raza;
         this.nombre = nombre;
         this.fuerza = fuerza;
@@ -37,8 +37,8 @@ public class Personaje {
         return fuerza;
     }
 
-    public void setFuerza (int fuerza) throws PersonajeException {
-        if (fuerza < FUERZA_MINIMA || fuerza > FUERZA_MAXIMA){
+    public void setFuerza(int fuerza) throws PersonajeException {
+        if (fuerza < FUERZA_MINIMA || fuerza > FUERZA_MAXIMA) {
             throw new PersonajeException("La fuerza tiene que estar comprendida entre 0 y 20");
         }
         this.fuerza = fuerza;
@@ -49,7 +49,7 @@ public class Personaje {
     }
 
     public void setInteligencia(int inteligencia) throws PersonajeException {
-        if (inteligencia < INTELIGENCIA_MINIMA || inteligencia > INTELIGENCIA_MAXIMA){
+        if (inteligencia < INTELIGENCIA_MINIMA || inteligencia > INTELIGENCIA_MAXIMA) {
             throw new PersonajeException("La inteligencia tiene que estar comprendida entre 0 y 20");
         }
         this.inteligencia = inteligencia;
@@ -59,8 +59,8 @@ public class Personaje {
         return vidaMaxima;
     }
 
-    public void setVidaMaxima(int vidaMaxima) throws PersonajeException{
-        if (vidaMaxima < VIDA_MINIMA || vidaMaxima > VIDA_MAXIMA){
+    public void setVidaMaxima(int vidaMaxima) throws PersonajeException {
+        if (vidaMaxima < VIDA_MINIMA || vidaMaxima > VIDA_MAXIMA) {
             throw new PersonajeException("La vida tiene que estar comprendida entre 0 y 100");
         }
         this.vidaMaxima = vidaMaxima;
@@ -70,12 +70,15 @@ public class Personaje {
         return vidaActual;
     }
 
-    public void setVidaActual(int vidaActual) throws PersonajeException{
-        if (vidaActual < VIDA_MINIMA || vidaActual > vidaMaxima){
-            throw new PersonajeException("La vida tiene que estar comprendida entre 0 y la vida maxima");
+    public void setVidaActual(int vidaActual) {
+        if (vidaActual < VIDA_MINIMA) {
+            this.vidaActual = VIDA_MAXIMA;
 
-        }
-        this.vidaActual = vidaActual;
+        } else if (vidaActual > vidaMaxima) {
+            this.vidaActual = vidaMaxima;
+
+        } else
+            this.vidaActual = vidaActual;
     }
 
     @Override
