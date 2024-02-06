@@ -20,7 +20,6 @@ public class Furgoneta extends Vehiculo{
         }
         this.pma = pma;
 
-
     }
 
     @Override
