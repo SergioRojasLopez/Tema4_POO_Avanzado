@@ -41,4 +41,9 @@ public class FicheroTextFormateado extends FicheroTexto implements Analizable{
     public void analizar() {
 
     }
+
+    @Override
+    public void convertir() {
+
+    }
 }
