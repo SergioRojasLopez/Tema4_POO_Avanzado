@@ -1,6 +1,6 @@
 import java.time.LocalDateTime;
 
-public class FicheroTextFormateado extends FicheroTexto implements Representable{
+public class FicheroTextFormateado extends FicheroTexto implements Analizable{
 
     private String tipoFuente;
     private int tamFuente;
@@ -38,12 +38,7 @@ public class FicheroTextFormateado extends FicheroTexto implements Representable
     }
 
     @Override
-    public void convertir() {
-
-    }
-
-    @Override
-    public void representar() {
+    public void analizar() {
 
     }
 }
