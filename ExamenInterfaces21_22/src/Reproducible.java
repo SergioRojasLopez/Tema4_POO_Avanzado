@@ -1,3 +1,3 @@
 public interface Reproducible {
-    void reproducir();
+    public String reproducir();
 }

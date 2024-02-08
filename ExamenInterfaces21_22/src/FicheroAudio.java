@@ -9,9 +9,9 @@ public class FicheroAudio extends FicheroBinario implements Reproducible{
     }
 
     @Override
-    public void reproducir() {
+    public String reproducir() {
 
-        System.out.println("Reproduciendo el audio" + getNombre());
+       return "Reproducienco" + getNombre();
 
     }
 
