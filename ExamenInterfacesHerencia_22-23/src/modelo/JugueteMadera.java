@@ -1,7 +1,7 @@
 package modelo;
 
 import excepciones.JugueteException;
-import modelo.Juguete;
+
 
 public abstract class JugueteMadera extends Juguete {
 
@@ -12,7 +12,6 @@ public abstract class JugueteMadera extends Juguete {
     public JugueteMadera(String nombre, String marca,double precio, String origenMadera, int annoTala)throws JugueteException {
         super(nombre, marca,precio);
         this.origenMadera = origenMadera;
-        this.annoTala = annoTala;
         setAnoTala(annoTala);
     }
 

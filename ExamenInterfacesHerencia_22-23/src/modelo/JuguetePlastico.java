@@ -4,12 +4,16 @@ import excepciones.JugueteException;
 
 public abstract class JuguetePlastico extends Juguete{
 
-    private TPlastico tPlastico;
+    private TPlastico tipoPlastico;
 
 
-    public JuguetePlastico(String nombre, String marca, double precio, TPlastico tPlastico) throws JugueteException {
+    public JuguetePlastico(String nombre, String marca, double precio, TPlastico PVC ) throws JugueteException {
         super(nombre, marca, precio);
+        this.tipoPlastico = tipoPlastico;
+
     }
 
-
+    public TPlastico gettPlastico() {
+        return tipoPlastico;
+    }
 }

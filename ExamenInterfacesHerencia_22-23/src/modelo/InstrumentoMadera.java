@@ -1,13 +1,14 @@
 package modelo;
 
 import excepciones.JugueteException;
-import modelo.JugueteMadera;
+
 
 public class InstrumentoMadera extends JugueteMadera {
 
     private int edadMinima;
+    public static final int EDAD_MINIMA_PERMITIDA = 1;
 
-    public InstrumentoMadera(String nombre, String marca, double precio, String origenMadera, int annoTala) throws JugueteException {
+    public InstrumentoMadera(String nombre, String marca, double precio, String origenMadera, int annoTala,int edadMinima) throws JugueteException {
         super(nombre, marca, precio, origenMadera, annoTala);
         setEdadMinima(edadMinima);
     }
@@ -17,7 +18,7 @@ public class InstrumentoMadera extends JugueteMadera {
     }
 
     public void setEdadMinima(int edadMinima) throws JugueteException{
-        if (edadMinima < 1){
+        if (edadMinima < EDAD_MINIMA_PERMITIDA){
             throw new JugueteException("La edad minima deber ser 1");
 
         }

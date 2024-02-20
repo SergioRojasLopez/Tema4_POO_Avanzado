@@ -1,7 +1,9 @@
 package main;
 
-import modelo.Juguete;
-import utils.UserDataCollector;
+import Utils.UserDataCollector;
+import excepciones.JugueteException;
+import modelo.*;
+
 
 public class Principal {
 
@@ -9,13 +11,13 @@ public class Principal {
     public static Juguete[] juguetes = new Juguete[MAX_JUGUETES];
     public static int numJuguetes = 0;
 
-    public static void main(String[] args) {
+    public static void main(String[] args) throws JugueteException {
         boolean salir = false;
 
 
         FiguraMadera j1 = new FiguraMadera("Cubo", "Cubemax", "España", 2020, "Rojo", 6);
         FiguraMadera j2 = new FiguraMadera("Dodecaedro", "Cubemax", "Camerún", 2022, "Amarillo", 12);
-        InstrumentoMusical j3 = new InstrumentoMusical("Xilófono", "Matel", "Brasil", 1999, 10);
+        InstrumentoMadera j3 = new InstrumentoMadera("Xilófono", "Matel", "Brasil", 1999, 10);
         VehiculoPlastico j4 = new VehiculoPlastico("Ferrari F11", "Ferrari", 4);
         VehiculoPlastico j5 = new VehiculoPlastico("Camión Pegaso", "Juguematic", 8);
         PiezaLego j6 = new PiezaLego("Bloque de lego", "Lego", 4, "Azul");

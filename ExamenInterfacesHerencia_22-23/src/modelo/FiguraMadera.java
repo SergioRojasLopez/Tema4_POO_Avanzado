@@ -2,20 +2,20 @@ package modelo;
 
 import excepciones.JugueteException;
 import interfaces.IApilable;
-import modelo.JugueteMadera;
+
 
 public class FiguraMadera extends JugueteMadera implements IApilable  {
 
     private String color;
     private int numLados;
 
-
-    public FiguraMadera(String nombre, String marca, double precio, String origenMadera, int annoTala, String color, int numLados) throws JugueteException {
+    public FiguraMadera(String nombre, String marca, double precio, String origenMadera, int annoTala,String color,int numLados) throws JugueteException {
         super(nombre, marca, precio, origenMadera, annoTala);
         this.color = color;
         setNumLados(numLados);
 
     }
+
 
     public void setNumLados(int numLados) throws JugueteException{
 
@@ -30,10 +30,7 @@ public class FiguraMadera extends JugueteMadera implements IApilable  {
     public void apilar( Juguete juguete) throws JugueteException {
         IApilable.super.apilar(juguete);
 
-        System.out.println("Se han apilado el juguete " + juguete.getNombre() + this.getNombre());
-
-
-
+        System.out.println("Se han apilado los juguetes " + juguete.getNombre()+ " sobre el juguete " + this.getNombre());
     }
 }
 

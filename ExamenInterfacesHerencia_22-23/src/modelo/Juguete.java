@@ -15,21 +15,23 @@ public abstract class Juguete {
 
     }
 
-    public void setPrecio(double precio) throws JugueteException {
+    public String getNombre() {
+        return nombre;
+    }
 
+    public String getMarca() {
+        return marca;
+    }
+
+    public double getPrecio() {
+        return precio;
+    }
+    public void setPrecio(double precio) throws JugueteException {
 
         if (precio < 1){
 
-            throw new JugueteException("El precio ndebe ser postivo");
+            throw new JugueteException("El precio debe ser postivo");
         }
         this.precio = precio;
-    }
-
-    public void setNombre(String nombre) {
-        this.nombre = nombre;
-    }
-
-    public void setMarca(String marca) {
-        this.marca = marca;
     }
 }
