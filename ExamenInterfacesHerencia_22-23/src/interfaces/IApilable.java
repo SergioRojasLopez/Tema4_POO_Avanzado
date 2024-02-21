@@ -21,7 +21,7 @@ public interface IApilable {
 
         if (juguete.getClass() != this.getClass()){
 
-            throw new JugueteException("No puedes apilar un juguete de tipo " + juguete.getClass().getSimpleName() + "con un jugeute de tipo" + this.getClass().getSimpleName());
+            throw new JugueteException("No puedes apilar un juguete de tipo " + juguete.getClass().getSimpleName() + "con un juguete de tipo" + this.getClass().getSimpleName());
         }
 
 

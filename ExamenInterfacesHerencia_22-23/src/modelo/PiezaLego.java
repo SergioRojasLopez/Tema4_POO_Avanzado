@@ -8,8 +8,8 @@ public class PiezaLego extends JuguetePlastico implements IApilable {
 private int longitud;
 private String color;
 
-    public PiezaLego(String nombre, String marca, double precio, TPlastico PVC,int longitud,String color) throws JugueteException {
-        super(nombre, marca, precio, TPlastico.ABS);
+    public PiezaLego(String nombre, String marca, double precio,int longitud,String color) throws JugueteException {
+        super(nombre, marca, precio,TPlastico.ABS);
         setLongitud(longitud);
         this.color = color;
 
@@ -39,4 +39,6 @@ private String color;
         IApilable.super.apilar(juguete);
         System.out.println("Se han apilado los juguetes " + juguete.getNombre() + " sobre el juguete " + this.getNombre() );
     }
+
+
 }

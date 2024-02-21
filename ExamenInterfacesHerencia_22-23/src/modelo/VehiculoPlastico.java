@@ -17,7 +17,7 @@ public class VehiculoPlastico extends JuguetePlastico{
 
     public void setNumRuedas(int numRuedas) throws JugueteException{
 
-        if (numRuedas > 4 || numRuedas < 1 ){
+        if (numRuedas < 1 ){
 
             throw new JugueteException("numero ineficiente de ruedas");
         }
