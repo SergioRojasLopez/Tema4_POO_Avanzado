@@ -16,7 +16,6 @@ public class FiguraMadera extends JugueteMadera implements IApilable  {
 
     }
 
-
     public void setNumLados(int numLados) throws JugueteException{
 
         if (numLados < 2){
@@ -31,6 +30,12 @@ public class FiguraMadera extends JugueteMadera implements IApilable  {
         IApilable.super.apilar(juguete);
 
         System.out.println("Se han apilado los juguetes " + juguete.getNombre()+ " sobre el juguete " + this.getNombre());
+    }
+
+    @Override
+    public String toString() {
+        return "Figura de madera [nombre: " + getNombre() + ", marca: " + getMarca() + ", precio: " + getPrecio() + ", origen madera: "
+                + getOrigenMadera() + ", año tala: " + getAnoTala() + ", color: " + color + ", numero lados: " + numLados;
     }
 }
 

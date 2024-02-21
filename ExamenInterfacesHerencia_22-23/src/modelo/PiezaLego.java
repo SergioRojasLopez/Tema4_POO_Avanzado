@@ -40,5 +40,9 @@ private String color;
         System.out.println("Se han apilado los juguetes " + juguete.getNombre() + " sobre el juguete " + this.getNombre() );
     }
 
-
+    @Override
+    public String toString() {
+        return "Pieza de lego [nombre: " + getNombre() + ", marca: " + getMarca() + ", precio: " + getPrecio() + ", logitud: "
+                + longitud + ", color: " + color;
+    }
 }

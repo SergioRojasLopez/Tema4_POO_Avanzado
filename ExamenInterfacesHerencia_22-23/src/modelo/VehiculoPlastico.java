@@ -25,5 +25,9 @@ public class VehiculoPlastico extends JuguetePlastico{
 
     }
 
-
+    @Override
+    public String toString() {
+        return " Vehiculo de plastico [nombre: " + getNombre() + ",marca: " + getMarca() + ", precio: " + getPrecio() +
+                ", numero de ruedas: " + numRuedas;
+    }
 }

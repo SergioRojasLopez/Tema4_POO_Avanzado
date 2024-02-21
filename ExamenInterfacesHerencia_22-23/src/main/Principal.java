@@ -12,7 +12,7 @@ public class Principal {
     public static Juguete[] juguetes = new Juguete[MAX_JUGUETES];
     public static int numJuguetes = 0;
 
-    public static void main(String[] args) throws JugueteException {
+    public static void main(String[] args) {
         boolean salir = false;
 
         try {
@@ -21,8 +21,8 @@ public class Principal {
             InstrumentoMadera j3 = new InstrumentoMadera("Xilófono", "Matel", 10, "Brasil", 1999, 2);
             VehiculoPlastico j4 = new VehiculoPlastico("Ferrari F11", "Ferrari", 5, 4);
             VehiculoPlastico j5 = new VehiculoPlastico("Camión Pegaso", "Juguematic", 7, 8);
-            PiezaLego j6 = new PiezaLego("Bloque de lego", "Lego", 5,  4, "Azul");
-            PiezaLego j7 = new PiezaLego("Bloque de lego", "Lego", 3,  4, "Verde");
+            PiezaLego j6 = new PiezaLego("Bloque de lego", "Lego", 5, 4, "Azul");
+            PiezaLego j7 = new PiezaLego("Bloque de lego", "Lego", 3, 4, "Verde");
 
             addJuguete(j1);
             addJuguete(j2);
@@ -88,11 +88,11 @@ public class Principal {
                     int precio_c3 = UserDataCollector.getEntero("Introduce el precio");
                     int numRuedas_c3 = UserDataCollector.getEntero("Introduce el número de ruedas");
 
-                    try{
-                        VehiculoPlastico vp = new VehiculoPlastico(nombre_c3,marca_c3,precio_c3,numRuedas_c3);
+                    try {
+                        VehiculoPlastico vp = new VehiculoPlastico(nombre_c3, marca_c3, precio_c3, numRuedas_c3);
                         addJuguete(vp);
 
-                    }catch (JugueteException e){
+                    } catch (JugueteException e) {
 
                         System.out.println(e.getMessage());
                     }
@@ -108,9 +108,9 @@ public class Principal {
                     String color_c4 = UserDataCollector.getString("Introduce el color");
 
                     try {
-                        PiezaLego pl = new PiezaLego(nombre_c4,marca_c4,precio_c4,unidades_c4,color_c4);
+                        PiezaLego pl = new PiezaLego(nombre_c4, marca_c4, precio_c4, unidades_c4, color_c4);
                         addJuguete(pl);
-                    }catch (JugueteException e){
+                    } catch (JugueteException e) {
 
                         System.out.println(e.getMessage());
                     }
@@ -133,10 +133,10 @@ public class Principal {
                     int opcion2_c5 = UserDataCollector.getEnteroMinMax("Selecciona un juguete", 1, numJuguetes);
                     Juguete j2_c5 = juguetes[opcion2_c5 - 1];
 
-                    try{
-                        ((IApilable)j2_c5).apilar(j2_c5);
+                    try {
+                        ((IApilable) j2_c5).apilar(j2_c5);
 
-                    }catch (JugueteException e){
+                    } catch (JugueteException e) {
 
                         System.out.println(e.getMessage());
                     }
@@ -144,7 +144,7 @@ public class Principal {
                     break;
 
                 case 6:
-                    for (Juguete j: juguetes) {
+                    for (Juguete j : juguetes) {
                         if (j != null) {
                             System.out.println(j);
                         }

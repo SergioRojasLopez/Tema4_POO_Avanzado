@@ -24,4 +24,10 @@ public class InstrumentoMadera extends JugueteMadera {
         }
         this.edadMinima = edadMinima;
     }
+
+    @Override
+    public String toString() {
+        return " Instrumento de madera [nombre: " + getNombre() + ", marca: " + getMarca() + ", precio: " + getPrecio()+ ", origen madera: "
+                + getOrigenMadera() + ", año de tala: " + getAnoTala() + ", edad minima: " + edadMinima;
+    }
 }
