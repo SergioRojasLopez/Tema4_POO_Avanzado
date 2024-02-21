@@ -32,9 +32,8 @@ public class Principal {
             addJuguete(j6);
             addJuguete(j7);
 
-        } catch (JugueteException e) {
+        } catch (JugueteException e1) {
 
-            System.out.println("error");
 
         }
 
@@ -115,7 +114,6 @@ public class Principal {
                         System.out.println(e.getMessage());
                     }
 
-
                     break;
 
                 case 5:
@@ -124,7 +122,7 @@ public class Principal {
                     Juguete j1_c5 = juguetes[opcion1_c5 - 1];
 
                     if (!(j1_c5 instanceof IApilable)) {
-                        System.out.println("El juguete" + j1_c5.getNombre() + " no es apilable.");
+                        System.out.println("El juguete " + j1_c5.getNombre() + " no es apilable.");
                         continue;
                     }
 
@@ -134,7 +132,7 @@ public class Principal {
                     Juguete j2_c5 = juguetes[opcion2_c5 - 1];
 
                     try {
-                        ((IApilable) j2_c5).apilar(j2_c5);
+                        ((IApilable)j2_c5).apilar(j2_c5);
 
                     } catch (JugueteException e) {
 
